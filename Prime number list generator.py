@@ -1,9 +1,10 @@
 import time
 import sys
 
+print("This program will output all prime numbers from 2 to upper bound.")
 
 try:
-    x = int(input("Enter your number: "))
+    x = int(input("Enter your upper bound: "))
 except ValueError:
     print("You have not entered a number.")
     time.sleep(3)
@@ -24,7 +25,7 @@ def pmchecker(x):
         return False
 
 def pmlister(x):
-    for i in range(4, x):
+    for i in range(2, x):
         if pmchecker(i) is True:
             pm.append(i)
     print(pm)
